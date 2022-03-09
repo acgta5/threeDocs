@@ -97,7 +97,7 @@ function onDocumentLoad( event ) {
 
 	var button = document.createElement( 'div' );
 	button.id = 'button';
-	button.innerHTML = '<img src="../files/ic_mode_edit_black_24dp.svg">';
+	button.innerHTML = '<img src="./files/ic_mode_edit_black_24dp.svg">';
 	button.addEventListener( 'click', function ( event ) {
 
 		window.open( 'https://github.com/mrdoob/three.js/blob/dev/docs/' + section + '/' + localizedPath + '.html' );
@@ -109,18 +109,18 @@ function onDocumentLoad( event ) {
 	// Syntax highlighting
 
 	var styleBase = document.createElement( 'link' );
-	styleBase.href = pathname.substring( 0, pathname.indexOf( 'docs' ) + 4 ) + '/prettify/prettify.css';
+	styleBase.href = './prettify/prettify.css';
 	styleBase.rel = 'stylesheet';
 
 	var styleCustom = document.createElement( 'link' );
-	styleCustom.href = pathname.substring( 0, pathname.indexOf( 'docs' ) + 4 ) + '/prettify/threejs.css';
+	styleCustom.href = './prettify/threejs.css';
 	styleCustom.rel = 'stylesheet';
 
 	document.head.appendChild( styleBase );
 	document.head.appendChild( styleCustom );
 
 	var prettify = document.createElement( 'script' );
-	prettify.src = pathname.substring( 0, pathname.indexOf( 'docs' ) + 4 ) + '/prettify/prettify.js';
+	prettify.src = './prettify/prettify.js';
 
 	prettify.onload = function () {
 
